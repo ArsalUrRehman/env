@@ -7,8 +7,8 @@ sudo apt-get install zip unzip -y
 sudo apt install curl -y
 sudo apt install wget -y
 sudo apt-get install software-properties-common -y
+sudo apt install wine64 -y
 echo "############################################" 
-
 
 
 #echo "################################################################################"
@@ -70,7 +70,7 @@ chmod +x terraform
 sudo mv terraform /usr/local/bin/
 echo "##########################################"
 
-
+echo " "
 
 echo "##########################################"
 echo "#         Installing Packer              #"
@@ -81,7 +81,7 @@ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(l
 sudo apt-get update && sudo apt-get install packer -y
 echo "##########################################"
 
-
+echo " "
 
 echo "##########################################"
 echo "#        Installing Python3              #"
@@ -91,7 +91,7 @@ sudo apt-get update
 sudo apt-get install python3 -y
 echo "##########################################"
 
-
+echo " "
 
 echo "#########################################"
 echo "#           Installing PIP              #"
@@ -100,7 +100,7 @@ sudo apt-get update
 sudo apt-get -y install python3-pip
 echo "#########################################"
 
-
+echo " "
 
 echo "#########################################"
 echo "#          Installing AWS CLI           #"
@@ -111,7 +111,7 @@ unzip awscliv2.zip
 sudo ./aws/install
 echo "#########################################"
 
-
+echo " "
 
 echo "#########################################"
 echo "#          Installing Boto3             #"
@@ -123,28 +123,48 @@ echo "#########################################"
 echo " "
 
 echo "#########################################"
+echo "#          Installing Slack             #"
+echo "#########################################"
+sudo apt-get update
+sudo snap install slack
+echo "#########################################"
+
+echo " "
+
+echo "#########################################"
 echo "#            Version Check              #"
 echo "#########################################"
 echo "VS Code Version"
 code --version
+echo " "
 echo "#########################################"
 echo "GIT Version"
 git --version
+echo " "
 echo "#########################################"
 echo "Ansible Version"
 ansible --version
+echo " "
 echo "#########################################"
 echo "Terraform Version"
 terraform --version
+echo " "
 echo "#########################################"
 echo "Packer Version"
 packer --version
+echo " "
 echo "#########################################"
 echo "Python3 Version"
 python3 --version
+echo " "
 echo "#########################################"
 echo "AWS CLI Version"
 aws --version
+echo " "
 echo "#########################################"
 echo "Boto3 Version"
 pip show boto3
+echo " "
+echo "#########################################"
+echo "Wine Version"
+wine64 --version
