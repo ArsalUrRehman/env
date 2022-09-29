@@ -7,7 +7,7 @@ sudo apt-get install zip unzip -y
 sudo apt install curl -y
 sudo apt install wget -y
 sudo apt-get install software-properties-common -y
-sudo apt install wine64 -y
+sudo apt install wine -y
 echo "############################################" 
 
 
@@ -137,7 +137,7 @@ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 sudo service docker start
 echo "#########################################"
 
@@ -190,3 +190,7 @@ echo "#########################################"
 echo " "
 echo "Wine Version"
 wine64 --version
+echo "#########################################"
+echo " "
+echo "Docker Version"
+Docker --version
