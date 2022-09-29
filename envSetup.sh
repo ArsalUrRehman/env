@@ -191,6 +191,6 @@ echo " "
 echo "Wine Version"
 wine64 --version
 echo "#########################################"
-echo " "
 echo "Docker Version"
-Docker --version
+docker --version
+echo "#########################################"
