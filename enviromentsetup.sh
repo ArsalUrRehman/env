@@ -3,11 +3,10 @@
 echo "#################################################################################"
 echo "Dependencies"
 echo "#################################################################################"
-sudo apt install upzip
-sudo apt install 
-sudo apt install curl
-sudo apt install wget
-sudo apt-get install software-properties-common
+sudo apt-get install zip unzip -y
+sudo apt install curl -y
+sudo apt install wget -y
+sudo apt-get install software-properties-common -y
 echo "#################################################################################" 
 
 
@@ -27,19 +26,7 @@ echo "##########################################################################
 echo "Installing Postman"
 echo "##################################################################################"
 sudo apt-get update
-sudo snap install postman -y
-echo "##################################################################################"
-
-
-
-echo "##################################################################################"
-echo"Installing Anydesk"
-echo "##################################################################################"
-sudo apt-get update
-wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
-echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
-sudo apt-get update
-sudo apt install anydesk -y
+sudo snap install postman
 echo "##################################################################################"
 
 
@@ -48,7 +35,7 @@ echo "##########################################################################
 echo "Installing VS Code"
 echo "##################################################################################"
 sudo apt-get update
-sudo snap install --classic code -y
+sudo snap install --classic code
 echo "##################################################################################"
 
 
@@ -133,13 +120,19 @@ echo "##########################################################################
 
 
 echo "Version Check"
-postman --version
-anydesk --version
+echo "VS Code Version"
 code --version
+echo "GIT Version"
 git --version
+echo "Ansible Version"
 ansible --version
+echo "Terraform Version"
 terraform --version
-packer --version
+echo "Packer Version"
+packer
+echo "Python3 Version"
 python3 --version
+echo "AWS CLI Version"
 aws --version
+echo "Boto3 Version"
 pip show boto3
