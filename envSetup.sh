@@ -3,11 +3,14 @@
 echo "############################################"
 echo "#             Dependencies                 #"
 echo "############################################"
+sudo apt-get update
 sudo apt-get install zip unzip -y
 sudo apt install curl -y
 sudo apt install wget -y
 sudo apt-get install software-properties-common -y
-sudo apt install wine -y
+sudo add-apt-repository universe -y
+sudo apt-get update
+sudo apt install p7zip-full p7zip-rar
 echo "############################################" 
 
 
@@ -98,6 +101,15 @@ echo "#           Installing PIP              #"
 echo "#########################################"
 sudo apt-get update
 sudo apt-get -y install python3-pip
+echo "#########################################"
+
+echo " "
+
+echo "#########################################"
+echo "#           Installing Wine              #"
+echo "#########################################"
+sudo apt-get update
+sudo apt install wine64-development
 echo "#########################################"
 
 echo " "
